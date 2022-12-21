@@ -5,11 +5,22 @@
 
 // SI LE HAGO MOOUSEOVER A 'header__submenu' ADD ACTIVO
 // SI HACEMOS MOUSEOOUT 'header__submenu' REMOVE ACTIVO
-console.log('holamundo')
+console.log('Im JavaScript :D')
 let colorMenu = document.querySelectorAll('.header__menu')
 let listaMenu = document.querySelector('.header__submenuactivo')
 let menuHover = document.querySelector('.header__menuactivo')
 let bgMenu    = document.querySelectorAll('.header__bg')
+let linesMenu = document.querySelectorAll('.lines__mmovil')
+let menuMovil = document.querySelector('.btn__movil')
+let bgMenuMovil = document.querySelector('.header__menumovil')
+
+menuMovil.addEventListener( 'click' ,()=>{
+    console.log('click')
+    linesMenu.forEach((cadaLine,i)=>{
+        linesMenu[i].classList.toggle('active')
+        bgMenuMovil.classList.toggle('active')
+    })
+})
 
 bgMenu.forEach((cadabgMenu,i)=>{
 
@@ -39,30 +50,30 @@ listaMenu.addEventListener('mouseout',()=>{
 })
 
 
-let tip      = document.querySelector('.bannertip__img')
-let btn      = document.querySelector('.bannertip__bgbtn')
-window.addEventListener('scroll',(e)=>{
+// let tip      = document.querySelector('.bannertip__img')
+// let btn      = document.querySelector('.bannertip__bgbtn')
+// window.addEventListener('scroll',(e)=>{
 
-    let pixeles  = window.scrollY;
-    let altoV    = window.innerHeight;
-    let Dista    = tip.offsetTop;
-    let detecTop = Dista - (altoV / 12)
+//     let pixeles  = window.scrollY;
+//     let altoV    = window.innerHeight;
+//     let Dista    = tip.offsetTop;
+//     let detecTop = Dista - (altoV / 12)
 
-    console.log(pixeles)
-    console.log(detecTop)
+//     console.log(pixeles)
+//     console.log(detecTop)
 
-    if(pixeles >= detecTop){
-        tip.style.transform = `translateY(-${(pixeles - detecTop) + 0.4 }px)`
-        btn.style.transform = `translateY(-${(pixeles - detecTop) + 0.4}px)`
-        parallax.style.transform = `translateY(-${(pixeles - detecTop) + .1}px)`
+//     if(pixeles >= detecTop){
+//         tip.style.transform = `translateY(-${(pixeles - detecTop) + 0.4 }px)`
+//         btn.style.transform = `translateY(-${(pixeles - detecTop) + 0.4}px)`
+//         parallax.style.transform = `translateY(-${(pixeles - detecTop) + .1}px)`
         
                                             
         
-    }else{
-        tip.style.transform = `translateY(60px)`
-        btn.style.transform = `translateY(-0px)`
-        parallax.style.transform = `translateY(0px)`
-    }
+//     }else{
+//         tip.style.transform = `translateY(60px)`
+//         btn.style.transform = `translateY(-0px)`
+//         parallax.style.transform = `translateY(0px)`
+//     }
 
     
     // if( pixeles >= detecTop ){
@@ -76,7 +87,7 @@ window.addEventListener('scroll',(e)=>{
 
     // }
 
-})
+// })
 
 // let parallax = document.querySelector('.artist__parallax')
 //     window.addEventListener('scroll',(e)=>{

@@ -340,10 +340,7 @@ body {
 .banner__tipall{
     width: 100%;
     min-height: 60vh;
-    background: var(--purple);
-    border: 3px solid red;
-    position: relative;
-    
+    background: var(--purple);    
 }
 .banner__tip{
     max-width: 100%;

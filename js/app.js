@@ -13,13 +13,19 @@ let bgMenu    = document.querySelectorAll('.header__bg')
 let linesMenu = document.querySelectorAll('.lines__mmovil')
 let menuMovil = document.querySelector('.btn__movil')
 let bgMenuMovil = document.querySelector('.header__menumovil')
+let menumovil__cont  = document.querySelector('.menumovil__cont')
+let logoZindex = document.querySelector('.header__logoimg')
 
 menuMovil.addEventListener( 'click' ,()=>{
     console.log('click')
     linesMenu.forEach((cadaLine,i)=>{
         linesMenu[i].classList.toggle('active')
         bgMenuMovil.classList.toggle('active')
+        
     })
+    
+    menumovil__cont.classList.toggle('active')
+    logoZindex.classList.toggle('active')
 })
 
 bgMenu.forEach((cadabgMenu,i)=>{

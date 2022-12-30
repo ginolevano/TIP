@@ -288,32 +288,82 @@ body {
 .lines__mmovil:not(:last-child){
     margin-bottom: .6em;
 }
-.banner__tipall{
-    background: var(--purple);
+
+.menumovil__cont{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+    background: #131313;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+    
+}
+.menumovil__ul{
+    width: 100%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 2.4em;
+}
+.menumovil__li{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.menumovil__li:not(:last-child){
+    margin-bottom: 3em;
+}
+.menumovil__a{
+    font-family: var(--dosis);
+    font-size: clamp(1.5em, 20vw, 2em);
+    text-transform: uppercase;
     position: relative;
-    margin-top: calc(100px/2);
+}
+.menumovil__a::before{
+    content: "";
+    position: absolute;
+    bottom: -.4em;
+    width: 100%;
+    height: .2em;
+    background: var(--gris);
+}
+
+
+
+
+.banner__tipall{
+    width: 100%;
+    min-height: 60vh;
+    background: var(--purple);
+    border: 3px solid red;
+    position: relative;
+    
 }
 .banner__tip{
-    width: 100%;
-    min-height: 680px;
+    max-width: 100%;
+    min-height: 60vh;
     background-image:url(../assets/Everything_Tip.svg);
+    background-size: 150% auto;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: 50% 24px;
+    background-position: center;
     object-fit: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-size: 100%;
+    
     
 }
 .bannertip__img{
-    width: 520px;
+    max-width: 40%;
     transform: translateY(4em);
 }
 
@@ -459,12 +509,31 @@ body {
 /* MEDIA QUERYS */
 
 @media screen and (max-width:960px) {
+    .header__nav {
+        min-height: 20vh;
+        
+    }
+    .header__logoimg{
+        position: relative;
+        z-index: 3;
 
+    }
+    .active.header__logoimg{
+        transition: all .5s ease;
+    }
     .header__ul{
         display: none;
     }
     .btn__movil{
         cursor: pointer;
         display: block;
+        
+        z-index: 3;
+
+    }
+    
+    .active.menumovil__cont{
+        transform: translateX(0em);
+        
     }
 }

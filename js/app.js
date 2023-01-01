@@ -15,22 +15,35 @@ let menuMovil = document.querySelector('.btn__movil')
 let bgMenuMovil = document.querySelector('.header__menumovil')
 let menumovil__cont  = document.querySelector('.menumovil__cont')
 let logoZindex = document.querySelector('.header__logoimg')
-
+let artistsMenu = document.querySelector('.open__artist')
+let openArtist  = document.querySelector('.submenumovil__artists')
+let arrow__backMenu = document.querySelector('.arrow__leftback')
 menuMovil.addEventListener( 'click' ,()=>{
     console.log('click')
     linesMenu.forEach((cadaLine,i)=>{
         linesMenu[i].classList.toggle('active')
         bgMenuMovil.classList.toggle('active')
-        
+        openArtist.classList.remove('active')
+        arrow__backMenu.classList.remove('active')
     })
     
     menumovil__cont.classList.toggle('active')
     logoZindex.classList.toggle('active')
 })
 
+artistsMenu.addEventListener('click',()=>{
+    console.log('quepasa??')
+    openArtist.classList.add('active')
+    arrow__backMenu.classList.add('active')
+})
+arrow__backMenu.addEventListener('click',()=>{
+    openArtist.classList.remove('active')
+    arrow__backMenu.classList.remove('active')
+})
 bgMenu.forEach((cadabgMenu,i)=>{
 
     bgMenu[i].addEventListener('mouseover',()=>{
+        console.log('probando')
             bgMenu[i].classList.add('activo')
             colorMenu[i].classList.add('activo')
     })
@@ -56,84 +69,3 @@ listaMenu.addEventListener('mouseout',()=>{
 })
 
 
-// let tip      = document.querySelector('.bannertip__img')
-// let btn      = document.querySelector('.bannertip__bgbtn')
-// window.addEventListener('scroll',(e)=>{
-
-//     let pixeles  = window.scrollY;
-//     let altoV    = window.innerHeight;
-//     let Dista    = tip.offsetTop;
-//     let detecTop = Dista - (altoV / 12)
-
-//     console.log(pixeles)
-//     console.log(detecTop)
-
-//     if(pixeles >= detecTop){
-//         tip.style.transform = `translateY(-${(pixeles - detecTop) + 0.4 }px)`
-//         btn.style.transform = `translateY(-${(pixeles - detecTop) + 0.4}px)`
-//         parallax.style.transform = `translateY(-${(pixeles - detecTop) + .1}px)`
-        
-                                            
-        
-//     }else{
-//         tip.style.transform = `translateY(60px)`
-//         btn.style.transform = `translateY(-0px)`
-//         parallax.style.transform = `translateY(0px)`
-//     }
-
-    
-    // if( pixeles >= detecTop ){
-    //     tip.style.transform = `translateY(-${(pixeles - detecTop) / 2}px)`
-    //     // tip.style.transition = `all 0s ease`
-    //     btn.style.transform = `translateY(-${(pixeles - detecTop) / 1}px)`
-        
-    // }else{
-    //     tip.style.transform = `translateY(-0px)`
-    //     btn.style.transform = `translateY(-0px)`
-
-    // }
-
-// })
-
-// let parallax = document.querySelector('.artist__parallax')
-//     window.addEventListener('scroll',(e)=>{
-    
-//     let pixel = window.scrollY;
-//     let altoV = window.innerHeight;
-//     let dist  = parallax.offsetTop;
-//     let detecTop = dist;
-
-//     if ( pixel >= detecTop){
-//         parallax.style.transform = `translateY(100%)`
-//     }
-// })
-
-    // MY. SLIDER DE ARTISTAS
-    let left    = document.querySelector('.arrow__left')
-    let right   = document.querySelector('.arrow__right')
-    let grande  = document.querySelector('.artist__imgslider')
-    let img     = document.querySelectorAll('.artist__img')
-    //MI POSICION
-    let foto = 0
-    let ancho = 100 / img.length
-
-    right.addEventListener('click',()=>{
-        
-        foto++
-        console.log('right')
-        if( foto === img.length ){
-            foto = 0
-        }
-        grande.style.transform =`translateX(-${ ancho * foto }%)`
-
-        
-    })
-    
-    left.addEventListener('click',()=>{
-        if(foto === 0){
-            foto = img.length
-        }
-        console.log('left')
-        foto--
-        grande.style.transform=`translateX(-${ foto * ancho }%)`
-    })

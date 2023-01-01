@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet">
     <title>Tip-Records</title>
     <link  rel="stylesheet" href="css/style.css">
     <script defer src="js/app.js" ></script>
@@ -110,6 +107,9 @@
 
             </ul>
 
+            <button class="arrow__leftback">
+                <img class="arrow__backmenuimg" src="assets/arrow.svg" alt="Back menu">
+            </button>
             
                 <button class="btn__movil">
                     <span class="header__menumovil">
@@ -119,210 +119,125 @@
                     </span>
                 </button>
                 
-                <div class="menumovil__cont ">
-                    <ul class="menumovil__ul">
-                        <li class="menumovil__li">
-                            <a class="menumovil__a" href="#">Home</a>
+                
+            <div class="conteiner__menumovilall">
+                <div class="menumovil__all">
+                    <div class="menumovil__cont ">
+                        <ul class="menumovil__ul">
+                            <li class="menumovil__li">
+                                <a class="menumovil__a" href="#">Home</a>
+                            </li>
+                            <li class="menumovil__li" >
+                                <a class="menumovil__a" href="#">T.i.p</a>
+                            </li>
+                            <li class="menumovil__li open__artist" >
+                                <a class="menumovil__a" href="#">Artists</a>
+                                <span class="arrow__rightartists"> 
+                                <img src="assets/arrow.svg" alt="arrow">
+                                </span>
+    
+                            <li class="menumovil__li" >
+                                <a class="menumovil__a" href="#">Releases</a>
+                            </li>
+                            <li class="menumovil__li" >
+                                <a class="menumovil__a" href="#">Media</a>
+                            </li>
+                            <li class="menumovil__li" >
+                                <a class="menumovil__a" href="#">Contact</a>
+                            </li>
+                            <li class="menumovil__li" >
+                                <a class="menumovil__a" href="#">Stores</a>
+                            </li>
+                            <li class="menumovil__li" >
+                                <a class="menumovil__a" href="#">BandCamp</a>
+                            </li>
+                        </ul>
+    
+                        
+                    </div>
+                </div>
+                <div class="submenumovil__artists ">
+                    
+                    <ul class="submenumovil__ul">
+                        
+                        
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/Raja.jpg" alt="Raja-Ram">
+                            </a>
                         </li>
-                        <li class="menumovil__li" >
-                            <a class="menumovil__a" href="#">T.i.p</a>
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/Lucas.jpg" alt="Lucas / Supermodule">
+                            </a>
                         </li>
-                        <li class="menumovil__li" >
-                            <a class="menumovil__a" href="#">Artists</a>
-                            <span> 
-                            <img src="assets/arrow.svg" alt="arrow">
-                            </span>
-                            <!-- <ul class="submenumovil__ul">
-                                <li class="submenumovil__li" >
-                                    <a class="submenumovil__a" href="#">Raja Ram</a>
-                                </li>
-                                <li class="submenumovil__li" >
-                                    <a class="submenumovil__a" href="#">Lucas / Supermodule</a>
-                                </li>
-                                <li class="submenumovil__li" >
-                                    <a class="submenumovil__a" href="#">1200 Mics</a>
-                                </li>
-                                <li class="submenumovil__li" >
-                                    <a class="submenumovil__a" href="#">Mandelbrot</a>
-                                </li>
-                                <li class="submenumovil__li" >
-                                    <a class="submenumovil__a" href="#">Dj Chicago</a>
-                                </li>
-                                <li class="submenumovil__li" >
-                                    <a class="submenumovil__a" href="#">Astral Projection</a>
-                                </li>
-                                <li class="submenumovil__li" >
-                                    <a class="submenumovil__a" href="#">Outsiders</a>
-                                </li>
-                                <li class="submenumovil__li" >
-                                    <a class="submenumovil__a" href="#">Iridian</a>
-                                </li>
-                                <li>
-                                    <a class="submenumovil__a" href="#">Logic Bomb</a>
-                                </li>
-                                <li class="submenumovil__li" >
-                                    <a class="submenumovil__a" href="#">The Zap!</a>
-                                </li>
-                                <li class="submenumovil__li" >
-                                    <a class="submenumovil__a" href="#">Brahma</a>
-                                </li>
-                            </ul> -->
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/1200.jpg" alt="Lucas / Supermodule">
+
+                            </a>
                         </li>
-                        <li class="menumovil__li" >
-                            <a class="menumovil__a" href="#">Releases</a>
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/Mandelbrot.jpg" alt="">
+                            </a>
                         </li>
-                        <li class="menumovil__li" >
-                            <a class="menumovil__a" href="#">Media</a>
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/Chicago.jpg" alt="">
+                            </a>
                         </li>
-                        <li class="menumovil__li" >
-                            <a class="menumovil__a" href="#">Contact</a>
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/Astral.jpg" alt="Astral Projection">
+                            </a>
                         </li>
-                        <li class="menumovil__li" >
-                            <a class="menumovil__a" href="#">Stores</a>
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/Outsiders.jpg" alt="">
+                            </a>
                         </li>
-                        <li class="menumovil__li" >
-                            <a class="menumovil__a" href="#">BandCamp</a>
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/iridian.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/Logic.jpeg" alt="">
+                            </a>
+                        </li>
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/Zap.webp" alt="">
+                            </a>
+                        </li>
+                        <li class="submenumovil__li" >
+                            <a class="submenumovil__a" href="#">
+                                <img src="assets/Brahma.jpg" alt="">
+                            </a>
                         </li>
                     </ul>
+                
                 </div>
+            </div>
         </nav>
 
     </header>
 
-
-    <div class="banner__tipall">
-
-        <div class="banner__tip">
-            
-                <img class="bannertip__img" src="assets/tomatop.png" alt="">
-                <div class="bannertip__bgbtn">
-
-                    <button class="bannertip__btn"> NEW BANDCAMP STORE - Click here </button>
-    
-                </div>
-            
-        
-        </div>
-
-    </div>
-
-    <div
-    class="artist__parallax"
-    >
-        <div class="artist__all ">
-            <div
-            class="arrow__left"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class=" left bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                </svg>
-            </div>   
-            <div
-                    class="arrow__right"
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="right bi bi-chevron-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                        </svg>
+    <main>
+        <div class="banner__conteiner">
+            <div class="banner__contimg">
+                <img class="banner__img" src="/assets/tomatop.png" alt="#">
+                <button class="btn__conteiner">
+                    <div class="btn__span">
+                        NEW BANDCAMP STORE - CLICK HERE
                     </div>
-        <div
-        class="artist__cont wrapper"
-        >
-            <h2
-            class="artist__h2"
-            >
-            <span
-            class="artist__span">Artists</span>
-            </h2>
-                
-                <div
-                class="artist__slider "
-                >
-    
-                
-                    <div
-                    class="artist__imgslider"
-                    >
-                        <a 
-                        class="artist__a"
-                        href="#">
-                        <img 
-                        class="artist__img"
-                        src="assets/rajaram-1.png" alt="#">
-                        </a>
-                        <a 
-                        class="artist__a"
-                        href="#">
-                        <img 
-                        class="artist__img"
-                        src="assets/lucas-1.png" alt="#">
-                        </a>
-                        <a 
-                        class="artist__a"
-                        href="#">
-                        <img 
-                        class="artist__img"
-                        src="assets/1200-1.png" alt="#">
-                        </a>
-                        <a 
-                        class="artist__a"
-                        href="#">
-                        <img 
-                        class="artist__img"
-                        src="assets/chiki-1.png" alt="#">
-                        </a>
-                        <a 
-                        class="artist__a"
-                        href="#">
-                        <img 
-                        class="artist__img"
-                        src="assets/zap-1.png" alt="#">
-                        </a>
-                        <a 
-                        class="artist__a"
-                        href="#">
-                        <img 
-                        class="artist__img"
-                        src="assets/astral-1.png" alt="#">
-                        </a>
-                        <a 
-                        class="artist__a"
-                        href="#">
-                        <img 
-                        class="artist__img"
-                        src="assets/lgoic-1.png" alt="#">
-                        </a>
-                        <a 
-                        class="artist__a"
-                        href="#">
-                        <img 
-                        class="artist__img"
-                        src="assets/brahma-1.png" alt="#">
-                        </a>
-                        <a 
-                        class="artist__a"
-                        href="#">
-                        <img 
-                        class="artist__img"
-                        src="assets/OUT-1.png" alt="#">
-                        </a>
-                    </div>
-                    
-                </div>
-            
-    
-    
-            
-            
+
+                </button>
+            </div>
         </div>
-        <div
-        class="latest__all"
-        >
-            
-        </div>
-        </div>
-    </div>
-  
-        
+    </main>
 
 </body>
 </html>

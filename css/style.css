@@ -3,7 +3,11 @@
     src: url(../basementGrotesque/BasementGrotesque-Black_v1.202.otf) format("opentype");
     font-display: swap;
 }
-
+@font-face{
+    font-family: 'aileron';
+    src: url(../aileron/Aileron-bold.otf) format("opentype");
+    font-display: swap;
+}
 :root {
     --grotesque : 'basementGrotesque';
     --gris  : #ccc;
@@ -317,10 +321,10 @@ body {
 }
 .conteiner__menumovilall{
 
-    overflow: hidden;
+   
 }
 .menumovil__all{
-    overflow: hidden;
+
 
 }
 
@@ -407,9 +411,9 @@ body {
 .banner__conteiner{
     width: 100%;
     height: 60vh;
-    background: greenyellow;
+    background: var(--purple);
     border: 4px solid white;
-    
+    overflow: hidden;
 }
 .banner__contimg{
     width: 100%;
@@ -425,7 +429,7 @@ body {
 }
 .banner__img{
     margin-top: 10em;
-    width: 30%;
+    max-width: 30%;
 }
 
 .btn__conteiner{
@@ -454,13 +458,31 @@ body {
     border-radius: .5em;
     background: var(--orange);
     box-shadow: .5em .5em var(--petrol);
-
     transform: translateY(-120%);
     transition: all .3s ease;
 
 }
 
-/* MEDIA QUERYS */
+.btn__span{
+    font-family: 'aileron';
+    font-size: 1.1rem;
+}
+
+
+.conteiner__slider{
+    width: 100%;
+    min-height: 50vh;
+}
+.slider__all{
+    width: 100%;
+    min-height: 50vh;
+    background-image: url(../assets/parallaxtips.png);
+    background-size: 120% auto;
+
+}
+
+
+/* MEDIA QUERYS START */
 
 @media screen and (max-width:960px) {
     
@@ -511,6 +533,17 @@ body {
         transform: translateX(0em);
         
     }
+     /* MAIN INICIO */
+    .banner__contimg{
+        background-size: 100em auto;
+    }
+    .banner__img{
+        margin-top: 0em;
+        max-width: 60%;
+    }
+    .btn__span{
+        font-size: .8em;
+    }
 }
 @media screen and (max-width:519px) {
     .header__logoimg{
@@ -536,9 +569,9 @@ body {
         width: 13em;
         min-height: 13em;
         border: .4em solid var(--gris);
-        background: purple
     
     } 
+
 }
 
 @media screen and (max-width:407px) {
@@ -568,4 +601,15 @@ body {
         background: purple
     
     } 
+ /* MAIN INICIO */
+ .banner__contimg{
+    background-size: 70em auto;
+}
+    .banner__img{
+    margin-top: 0em;
+    max-width: 90%;
+}
+    .btn__span{
+    font-size: .8em;
+}
 }

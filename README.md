@@ -3,6 +3,6 @@
 ### css
 ### Js
 
+<img width="1894" alt="Captura de pantalla 2023-01-02 a las 1 14 25" src="https://user-images.githubusercontent.com/95493476/210188199-312fc6ee-a976-4b14-9314-6686545bdbce.png">
 
-<img width="1672" alt="Captura de pantalla 2022-12-21 a las 19 31 44" src="https://user-images.githubusercontent.com/95493476/208978477-5886879b-44a4-422b-9414-9fce74d8062a.png">
 

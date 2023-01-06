@@ -130,6 +130,7 @@ body {
     position: relative;
     overflow-x: hidden;
 
+
 } 
 .wrapper {
     max-width: 1150px;
@@ -483,15 +484,56 @@ body {
     width: 100%;
     min-height: 50vh;
 }
-.slider__all{
+.all__slider{
     width: 100%;
     min-height: 50vh;
     background-image: url(../assets/parallaxtips.png);
     background-size: 120% auto;
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    -webkit-background-clip: padding-box;
+    -webkit-background-origin: padding-box;
+    display: flex;
+    justify-content: center;
+    
+}
+.info__slider{
+    width: 80%;
+    background-color: red;
 
 }
+.slider__span{
+    border: 3px solid blue;
+    font-family: 'basementGrotesque';
+    font-size: clamp(1.5em, 20vw, 5em);
+}
 
+.slider__ul{
+    width: 100%;
+    min-height: 50vh;
 
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+    position: absolute;
+
+}
+.slider__li{
+    width: 20em;
+    min-height: 10em;
+    background-color: blue;
+    border: 3px solid black;
+}
+.slider__li:not(:last-child){
+    margin-right: 1em;
+}
+.pie{
+    width: 100%;
+    min-height: 50vh;
+    background-color: blue;
+}
 /* MEDIA QUERYS START */
 
 @media screen and (max-width:960px) {

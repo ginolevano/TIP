@@ -137,8 +137,10 @@ body {
     margin: auto;
 }
 .header{
-    background: var(--black);
-
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 2;
 }
 .header__nav{
     width: 100%;
@@ -147,6 +149,10 @@ body {
     justify-content: space-between;
     padding: 0em 1.8em;
     background: var(--black);
+    position: fixed;
+    left: 0em;
+    background: var(--black);
+
 }
 .header__logo{
     width: 100%;
@@ -243,10 +249,12 @@ body {
 .arrow__leftback{
     position: absolute;
     z-index: 5;
+    top: 0;
     left: 1.8em;
     transform: translateX(1.5em);
     opacity: 0;
     transition: all .5s 0s ease;
+    padding: 5.5em 0em 0em 0em;
 }
 .active.arrow__leftback{
     opacity: 1;
@@ -330,9 +338,9 @@ body {
 
 .menumovil__cont{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: absolute;
-    top: 0px;
+    bottom: 0px;
     left: 0px;
     z-index: 2;
     background: #131313;
@@ -341,7 +349,7 @@ body {
 }
 .menumovil__ul{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -379,25 +387,26 @@ body {
 
 .submenumovil__artists{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #131313;
     position: absolute;
     z-index: 3;
-    top: 0;
+    bottom:0; 
     left: 0;
     display: none;
     overflow: scroll;
     transform: translateX(100%);
     transition: transform 1s ease;
-    
 }
 .active.submenumovil__artists{
     transform: translateX(0%);
     transform-origin: right;
-
+ 
 }
 
-
+.submenumovil__ul{
+    padding: 10em 0em 0em 0em;
+}
 
 
 .submenumovil__li{
@@ -419,9 +428,10 @@ body {
     width: 100%;
     min-height: 60vh;
     background-image: url(../assets/Everything_Tip.svg);
-    background-size: cover;
+    background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -485,9 +495,14 @@ body {
 /* MEDIA QUERYS START */
 
 @media screen and (max-width:960px) {
-    
     .header__nav {
+        width: 100%;
         min-height: 20vh;
+        position: fixed;
+        bottom: 0em;
+        left: 0em;
+    }
+    .position__botton{
         
     }
     .header__logoimg{
@@ -503,6 +518,8 @@ body {
     }
     
     .submenumovil__artists{
+        width: 100%;
+        min-height: 100vh;
         display: flex;
         justify-content: center;
         align-content: center;
@@ -517,7 +534,6 @@ body {
         row-gap: 1em;
         column-gap: .4em;
         place-items: center;
-        margin-top: calc(10em * 1.3);
         
     }
     
@@ -549,9 +565,7 @@ body {
     .header__logoimg{
         width: 35%;
     }
-    .menumovil__ul{
-        padding: 8em 0em 2em 0em;
-    }
+    
     .menumovil__li{
         width: 40%;
     }
@@ -591,7 +605,7 @@ body {
         grid-template-columns: repeat(auto-fit,minmax(8em,1fr));
         row-gap: 2em;
         column-gap: 2em;
-        margin-top: calc(10em * 1);
+     
 
     } 
 

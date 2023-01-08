@@ -565,7 +565,7 @@ body {
     background-image: url(../assets/para.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     background-attachment: fixed;
     -webkit-background-attachment: fixed;
     -webkit-background-clip: padding-box;
@@ -623,6 +623,65 @@ body {
 }
 .latest__epcolor{
     color: var(--orange);
+}
+.latests__btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0em 0em 4em 0em;
+}
+.headplayer__cont{
+    width: 100%;
+    height: 10vh;
+    background: red;
+    position: relative;
+}
+.headplayer__cont::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+.headplayer__img{
+    width: 100%;
+    height: 10vh;
+    background-image: url(../assets/parallaxtipsMANDA.png);
+    background-size: 120% auto;
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    -webkit-background-clip: padding-box;
+    -webkit-background-origin: padding-box;
+    background-position: center;
+    transition-property: background-position;
+    transition: all 2s ease;
+}
+.headplayer__bgimg{
+
+}
+.player__cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.player__width{
+    max-width: 1400px;
+    width: 80%;
+}
+.player__title{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.player__span{
+    font-family: 'basementGrotesque';
+    font-size: clamp(1.5em, 20vw, 3em);
+}
+.player__music{
+
 }
 .pie{
     width: 100%;
@@ -704,12 +763,7 @@ body {
 
     }
     
-    /* .latest__ul{
-        width:100%;
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(auto-fill, minmax(20em,1fr));
-    } */
+    
 
 }
 @media screen and (max-width:600px){
@@ -796,8 +850,6 @@ body {
         grid-template-columns: repeat(auto-fit,minmax(8em,1fr));
         row-gap: 2em;
         column-gap: 2em;
-     
-
     } 
 
     .submenumovil__li{

@@ -72,7 +72,7 @@ arrowBackMenu.addEventListener('click',()=>{
 bgMenu.forEach((cadabgMenu,i)=>{
 
     bgMenu[i].addEventListener('mouseover',()=>{
-        console.log('probando')
+        console.log('probando eheh')
             bgMenu[i].classList.add('activo')
             colorMenu[i].classList.add('activo')
     })

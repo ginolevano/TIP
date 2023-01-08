@@ -425,12 +425,12 @@ body {
 }
 .banner__contimg{
     width: 100%;
-    min-height: 60vh;
+    min-height: 70vh;
     background-image: url(../assets/Everything_Tip.svg);
-    background-size: 100% auto;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -484,7 +484,7 @@ body {
 }
 .slider__all{
     width: 100%;
-    min-height: 70vh;
+    min-height: 50vh;
     background-image: url(../assets/parallaxtips.png);
     background-size: 120% auto;
     background-attachment: fixed;
@@ -629,7 +629,7 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 0em 0em 4em 0em;
+    padding: 2em 0em 4em 0em;
 }
 .headplayer__cont{
     width: 100%;
@@ -664,9 +664,24 @@ body {
 }
 .player__cont{
     width: 100%;
+    background-image: url(../assets/difondoTres.svg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100% auto;
     display: flex;
     justify-content: center;
     align-content: center;
+    position: relative;
+}
+.player__cont::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3); 
+
 }
 .player__width{
     max-width: 1400px;
@@ -675,25 +690,153 @@ body {
 .player__title{
     margin-top: 2em;
     margin-bottom: 2em;
+    position: relative;
+    z-index: 1;
 }
 .player__span{
     font-family: 'basementGrotesque';
     font-size: clamp(1.5em, 20vw, 3em);
 }
 .player__music{
+    position: relative;
+    z-index: 1;
+}
+
+.player__btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0em 4em 0em;
+}
+
+.decoration__cont{
+    width: 100%;
+    min-height: 20vh;
+}
+.decoration__img{
+    width: 100%;
+    min-height: 20vh;
+    background-image: url(../assets/parallaxtipsbra.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
 }
+
+.decoration__img::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: rgba(0,0,0,0.3); 
+
+}
+.decoration__bgimg{
+
+}
+
 .pie{
     width: 100%;
     min-height: 50vh;
     background-color: blue;
 }
+
+
+.promo__cont{
+    width: 100%;
+    background-image: url(../assets/difondoDos.svg);
+    background-size: 100% auto;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.promo__cont::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3); 
+
+}
+.promo__width{
+    max-width: 1400px;
+    width: 80%;
+    width: 80%;
+}
+.promo__title{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 5em 0em 2em 0em;
+}
+.promo__spantitle{
+    font-family: 'basementGrotesque';
+    font-size: clamp(1.5em, 20vw, 3em);
+}
+.promo__spantitle:not(:last-child){
+    margin-bottom: .6em;
+}
+.promo__spaninfo{
+    font-family: 'aileron';
+    font-size: clamp(1.5em, 20vw, .8em);
+
+}
+.promo__video{
+    position: relative;
+    z-index: 1;
+}
+
+.promo__btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
+
+
+
+.bannertip{
+    width: 100%;
+    min-height:20vh ;
+    background: red;
+    background-image: url(../assets/parallaxtips.png);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.bannerti__cont{
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bannerti__img{
+    width: 50%;
+}
+
+
+
+
+
 /* MEDIA QUERYS START */
 
 @media screen and (max-width:960px) {
     .header__nav {
         width: 100%;
-        min-height: 20vh;
+        padding: 1em 2em 1em 2em;
         position: fixed;
         bottom: 0em;
         left: 0em;
@@ -746,8 +889,9 @@ body {
         
     }
      /* MAIN INICIO */
+
     .banner__contimg{
-        background-size: 100em auto;
+        background-attachment: unset;
     }
     .banner__img{
         margin-top: 0em;
@@ -762,9 +906,30 @@ body {
         width: 500%;
 
     }
+    .decoration__cont{
+        width: 100%;
+        min-height: 20vh;
+    }
+    .decoration__img{
+        width: 100%;
+        min-height: 20vh;
+        
     
-    
+    }
 
+    .promo__spaninfo{
+    font-family: 'aileron';
+    font-size: clamp(.9em, 20vw, .8em);
+
+}
+
+    .promo__youtube{
+        height: 35vh;
+    }
+
+    .bannerti__img{
+        width: 100%;
+    }
 }
 @media screen and (max-width:600px){
     .slider__all{
@@ -831,6 +996,11 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(18em,1fr));
     } */
     
+    .btn__promosizemovil{
+
+    }
+
+ 
 }
 
 @media screen and (max-width:407px) {
@@ -859,9 +1029,7 @@ body {
     
     } 
  /* MAIN INICIO */
- .banner__contimg{
-    background-size: 70em auto;
-}
+
     .banner__img{
     margin-top: 0em;
     max-width: 90%;

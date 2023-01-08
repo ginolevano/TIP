@@ -421,7 +421,6 @@ body {
     width: 100%;
     height: 70vh;
     background: var(--purple);
-    border: 4px solid white;
     overflow: hidden;
 }
 .banner__contimg{
@@ -497,8 +496,8 @@ body {
 
 }
 .slider__info{
+    max-width: 1400px;
     width: 80%;
-    background-color: brown;
     display: flex;
     justify-content: center;    
     align-items: center;
@@ -508,13 +507,13 @@ body {
 
 }
 .slider__title{
-    width: 80%;
+    max-width: 1400px;
+    width: 100%;
     background-color: transparent;
     position: absolute;
     top: 0;
 }
 .slider__span{
-    border: 3px solid blue;
     font-family: 'basementGrotesque';
     font-size: clamp(1.5em, 20vw, 3em);
 
@@ -540,45 +539,91 @@ body {
 .arrow__right{
 
 }
-
-.slider__contul{
+.slider__contenedor{
+    max-width: 1050px;
     width: 80%;
     min-height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: peru;
-    opacity: 1;
     position: absolute;
     overflow: hidden;
-}
-
-.slider__ul{
-    width: 200%;
-    position: absolute;
-    left: 0;
-    display: flex;
-    flex-flow:  row nowrap;
-    justify-content: center;
-    align-items: center;
-    transition: all .5s ease-in-out;
-}
-
-.slider__li{
-    width: 100%;
-    left: 0;
-    border: 4px solid red;
-}
-
-.slider__artists{
-    display: flex;
-
     
 }
-.slider__artistsli{
-    width: 100%;
+
+
+.slider__ul{
+    width: 330%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    transition: all .5s ease-in-out;
+
 }
 
+
+
+.latest{
+    width: 100%;
+    background-image: url(../assets/para.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    -webkit-background-clip: padding-box;
+    -webkit-background-origin: padding-box;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.latest__width{
+    max-width: 1400px;
+    width: 80%;
+}
+.latest__title{
+    margin-top: 2em;
+}
+.latest__span{
+    font-family: 'basementGrotesque';
+    font-size: clamp(1.5em, 20vw, 3em);
+}
+.latest__cont{
+    width: 100%;
+    
+}
+.latest__ul{
+    
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(16em,1fr));
+    grid-gap: 2em;
+    gap: 2em;
+    padding: 4em 0;
+}
+.latest__li{
+    
+}
+.latest__a{
+
+}
+.latest__img{
+    object-fit: cover;
+}
+.latest__info{
+    display: flex;
+    flex-direction: column;
+}
+.latest__name{
+    margin-top: 1.6em;
+    font-family: 'basementGrotesque';
+    text-transform: uppercase;
+}
+.latest__ep{
+    font-family: 'aileron';
+    white-space: pre-wrap;
+}
+.latest__epcolor{
+    color: var(--orange);
+}
 .pie{
     width: 100%;
     min-height: 50vh;
@@ -652,12 +697,49 @@ body {
     .btn__span{
         font-size: .8em;
     }
-    
+
+
     .slider__ul{
-        width: 300%;
+        width: 500%;
+
     }
+    
+    /* .latest__ul{
+        width:100%;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(20em,1fr));
+    } */
+
 }
-@media screen and (max-width:519px) {
+@media screen and (max-width:600px){
+    .slider__all{
+        min-height: 50vh;
+    }
+    .slider__title{
+        width: 100%;
+    }
+    .slider__span{
+        font-size: clamp(1.5em, 20vw, 2em);
+        text-align: center;
+
+    }
+    .latest__span{
+        font-size: clamp(1.5em, 20vw, 2em);
+        text-align: center;
+
+    }
+    .slider__contenedor{
+        width: 80%;
+    }
+    .slider__ul{
+        width: 1000%;
+        overflow-x: auto;
+    }
+    
+}
+
+@media screen and (max-width:499px) {
     .header__logoimg{
         width: 35%;
     }
@@ -681,6 +763,19 @@ body {
         border: .4em solid var(--gris);
     
     } 
+    
+
+
+    .slider__contul{
+        width: 100%;
+    }
+
+    /* .latest__ul{
+        width:100%;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(18em,1fr));
+    } */
     
 }
 

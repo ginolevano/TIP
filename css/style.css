@@ -8,6 +8,13 @@
     src: url(../aileron/Aileron-bold.otf) format("opentype");
     font-display: swap;
 }
+@font-face{
+    font-family: 'aileron-regular';
+    src: url(../aileron/Aileron-Regular.otf) format("opentype");
+    font-display: swap;
+}
+
+
 :root {
     --grotesque : 'basementGrotesque';
     --gris  : #ccc;
@@ -474,7 +481,7 @@ body {
 
 .btn__span{
     font-family: 'aileron';
-    font-size: 1.1rem;
+    font-size: clamp(1em,20vw,1.1em);
 }
 
 
@@ -616,10 +623,10 @@ body {
     margin-top: 1.6em;
     font-family: 'basementGrotesque';
     text-transform: uppercase;
+
 }
 .latest__ep{
-    font-family: 'aileron';
-    white-space: pre-wrap;
+    font-family: 'aileron-regular';
 }
 .latest__epcolor{
     color: var(--orange);
@@ -740,11 +747,7 @@ body {
 
 }
 
-.pie{
-    width: 100%;
-    min-height: 50vh;
-    background-color: blue;
-}
+
 
 
 .promo__cont{
@@ -786,8 +789,10 @@ body {
     margin-bottom: .6em;
 }
 .promo__spaninfo{
-    font-family: 'aileron';
-    font-size: clamp(1.5em, 20vw, .8em);
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-family: 'aileron-regular';
+    font-size: clamp(2em, 20vw, .8em);
 
 }
 .promo__video{
@@ -828,9 +833,86 @@ body {
 }
 
 
+.bannerface{
+    width: 100%;
+    min-height: 40vh;
+    background: #000;
+}
+.bannerface__img{
+    width: 100%;
+    min-height: 40vh;
+    background-image: url(../assets/Everything_Tip.svg);
+    background-size: 80em auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bannerface__bgimg{
+
+}
+
+.footer__cont{
+    width: 100%;
+    background-color: #131313;
+    position: relative;
+    padding: 2em 0em 0em 0em;
+
+}
 
 
+.footer__img{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    position: relative;
+}
+.footer__img::after{
+    content: "";
+    position: absolute;
+    width: 70%;
+    min-height: 1px;
+    background-color: #242424;
+    top: 0em;
+}
+.footer__banner{
+    width: 50%;
+}
 
+.footer__titlecont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 1em;
+
+}
+
+.footer__ufo{
+    width: 3em;
+    min-height: 2vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.footer__bgufo{
+    position: absolute;
+    z-index: 999;
+    width: 3em;
+    min-height: 2vh;
+    background-image: url(../assets/404.png);
+    background-size: 60% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.footer__title{
+    font-size: clamp(.8em,20vw, .8em);
+    font-family: 'aileron-regular';
+    
+    
+}
 /* MEDIA QUERYS START */
 
 @media screen and (max-width:960px) {
@@ -840,6 +922,7 @@ body {
         position: fixed;
         bottom: 0em;
         left: 0em;
+        background: transparent;
     }
     .position__botton{
         
@@ -847,7 +930,7 @@ body {
     .header__logoimg{
         position: relative;
         z-index: 3;
-
+        display: none;
     }
     .active.header__logoimg{
         transition: all .5s ease;
@@ -914,20 +997,28 @@ body {
         width: 100%;
         min-height: 20vh;
         
-    
     }
 
     .promo__spaninfo{
-    font-family: 'aileron';
-    font-size: clamp(.9em, 20vw, .8em);
-
-}
+        
+        font-family: 'aileron-regular';
+        font-size: clamp(1.4em, 20vw, 1em);
+        line-height: 1.2;
+    }   
 
     .promo__youtube{
         height: 35vh;
     }
 
     .bannerti__img{
+        width: 100%;
+    }
+    .bannerface__img{
+    background-size: cover;    }
+    .footer__img::after{
+        width: 80%;
+    }
+    .footer__banner{
         width: 100%;
     }
 }
@@ -955,6 +1046,7 @@ body {
         width: 1000%;
         overflow-x: auto;
     }
+    
     
 }
 
@@ -989,18 +1081,13 @@ body {
         width: 100%;
     }
 
-    /* .latest__ul{
-        width:100%;
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(auto-fill, minmax(18em,1fr));
-    } */
+
     
     .btn__promosizemovil{
 
     }
 
- 
+    
 }
 
 @media screen and (max-width:407px) {
@@ -1033,8 +1120,9 @@ body {
     .banner__img{
     margin-top: 0em;
     max-width: 90%;
-}
-    .btn__span{
-    font-size: .8em;
-}
+    }
+        .btn__span{
+        font-size: .8em;
+    }
+
 }

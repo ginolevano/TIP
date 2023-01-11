@@ -33,7 +33,7 @@ window.addEventListener('scroll',(e)=>{
         let pixel = window.scrollY
         bannerTip.style.transform = `translateY(-${pixel/6}px)`
         btnTip.style.transform = `translateY(-${pixel/6}px)`
-        faceTip.style.transform = `translateY(-${pixel/10}px)`
+        faceTip.style.transform = `translateY(-${pixel/8}px)`
         console.log('e')
 
     }

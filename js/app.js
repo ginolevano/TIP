@@ -25,6 +25,20 @@ let largeSlider    = document.querySelector('.slider__ul')
 let sliderLi       = document.querySelectorAll('.slider__li')
 let imgLi          = document.querySelectorAll('.slider__artistsli')
 let anchoSlider    = 100 / sliderLi.length
+const bannerTip    = document.querySelector('.banner__img')
+const btnTip       = document.querySelector('.btn__conteiner')
+const faceTip      = document.querySelector('.banner__contimg')
+window.addEventListener('scroll',(e)=>{
+    if(window.matchMedia("(min-width:970px)").matches){
+        let pixel = window.scrollY
+        bannerTip.style.transform = `translateY(-${pixel/6}px)`
+        btnTip.style.transform = `translateY(-${pixel/6}px)`
+        faceTip.style.transform = `translateY(-${pixel/10}px)`
+        console.log('e')
+
+    }
+})
+
 
 arrowRight.addEventListener('click',()=>{
     foto++

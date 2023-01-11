@@ -426,25 +426,27 @@ body {
 
 .banner__conteiner{
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     background: var(--purple);
     overflow: hidden;
 }
 .banner__contimg{
     width: 100%;
-    min-height: 70vh;
+    min-height: 90vh;
     background-image: url(../assets/Everything_Tip.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: 98% auto;
+    background-position: top;
+    background-position-y: 5em;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .banner__img{
-    margin-top: 10em;
+    margin-top: 2em;
     max-width: 30%;
 }
 
@@ -452,12 +454,12 @@ body {
     position: relative;
     cursor: pointer;
     z-index: 1;
-    transition: all .5s ease;
     background: var(--yellow);
     padding: 1em 2em 1em 2em;
     border-radius: .5em;
     box-shadow: .5em .5em var(--petrol);
     overflow: hidden;
+
 }
 .btn__conteiner:hover.btn__conteiner::after{
     transform: translateY(0%);
@@ -974,7 +976,10 @@ body {
      /* MAIN INICIO */
 
     .banner__contimg{
+        background-size: cover;
+        background-position: top;
         background-attachment: unset;
+        background-position-y: 0em;
     }
     .banner__img{
         margin-top: 0em;

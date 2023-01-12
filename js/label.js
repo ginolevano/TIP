@@ -18,8 +18,6 @@ let logoZindex     = document.querySelector('.header__logoimg')
 let artistsMenu    = document.querySelector('.open__artist')
 let openArtist     = document.querySelector('.submenumovil__artists')
 let arrowBackMenu  = document.querySelector('.arrow__leftback')
-let arrowRight     = document.querySelector('.arrow__right')
-let arrowLeft      = document.querySelector('.arrow__left')
 let foto           = 0
 let largeSlider    = document.querySelector('.slider__ul')
 let sliderLi       = document.querySelectorAll('.slider__li')
@@ -40,26 +38,6 @@ window.addEventListener('scroll',(e)=>{
 })
 
 
-arrowRight.addEventListener("click",()=>{
-    foto++
-    if(foto === sliderLi.length){
-        foto = 0
-    } 
-   
-    largeSlider.style.transform =`translateX(-${anchoSlider * foto}%)`
-    console.log('todo fine??')
-    
-})
-arrowLeft.addEventListener('click',()=>{
-    if(foto == 0){
-       foto = sliderLi.length
-    }
-    foto--
-
-    largeSlider.style.transform = `translateX(-${ foto * anchoSlider}%)`
-    console.log('todo bien')
-
-})
 
 menuMovil.addEventListener( 'click' ,()=>{
     console.log('click')
